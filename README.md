@@ -5,6 +5,7 @@ kubectl create secret docker-registry myPrivateRegistryScret --docker-server=<<y
 ## Step #2 - Use secret for pulling images
 
 ### For POD
+```
   apiVersion: v1
   kind: Pod
   metadata:
@@ -15,3 +16,4 @@ kubectl create secret docker-registry myPrivateRegistryScret --docker-server=<<y
       image: <<your-private-image>>
     imagePullSecrets:
     - name: myPrivateRegistryScret
+```
